@@ -27,9 +27,9 @@ import webdataset as wds
 import logging
 
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.dataio.batch import PaddedBatch
+from speechbrain_experimental.dataio.batch import PaddedBatch
 
 logger = logging.getLogger(__name__)
 

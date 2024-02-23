@@ -3,7 +3,7 @@ import pytest
 
 
 def test_saveable_dataloader(tmpdir, device):
-    from speechbrain.dataio.dataloader import SaveableDataLoader
+    from speechbrain_experimental.dataio.dataloader import SaveableDataLoader
 
     save_file = tmpdir + "/dataloader.ckpt"
     dataset = torch.randn(10, 1, device=device)
@@ -25,7 +25,7 @@ def test_saveable_dataloader(tmpdir, device):
 
 def test_saveable_dataloader_multiprocess(tmpdir):
     # Same test as above, but with multiprocess dataloading
-    from speechbrain.dataio.dataloader import SaveableDataLoader
+    from speechbrain_experimental.dataio.dataloader import SaveableDataLoader
 
     save_file = tmpdir + "/dataloader.ckpt"
     dataset = torch.randn(10, 1)
@@ -60,7 +60,7 @@ def test_saveable_dataloader_multiprocess(tmpdir):
 def test_looped_loader(tmpdir):
     # Tests that LoopedLoader will raise StopIteration appropriately
     # And that it can recover and keep the place.
-    from speechbrain.dataio.dataloader import LoopedLoader
+    from speechbrain_experimental.dataio.dataloader import LoopedLoader
 
     save_file = tmpdir + "/loopedloader.ckpt"
     data = range(3)

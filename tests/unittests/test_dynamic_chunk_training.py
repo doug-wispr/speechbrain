@@ -1,6 +1,6 @@
 def test_dynchunktrain_sampler():
-    from speechbrain.core import Stage
-    from speechbrain.utils.dynamic_chunk_training import (
+    from speechbrain_experimental.core import Stage
+    from speechbrain_experimental.utils.dynamic_chunk_training import (
         DynChunkTrainConfig,
         DynChunkTrainConfigRandomSampler,
     )
@@ -30,7 +30,7 @@ def test_dynchunktrain_sampler():
 
 
 def test_dynchunktrain():
-    from speechbrain.utils.dynamic_chunk_training import DynChunkTrainConfig
+    from speechbrain_experimental.utils.dynamic_chunk_training import DynChunkTrainConfig
 
     assert DynChunkTrainConfig(chunk_size=16).is_infinite_left_context()
     assert not DynChunkTrainConfig(

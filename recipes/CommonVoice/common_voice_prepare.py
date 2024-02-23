@@ -17,8 +17,8 @@ import logging
 import unicodedata
 import functools
 
-from speechbrain.utils.parallel import parallel_map
-from speechbrain.dataio.dataio import read_audio_info
+from speechbrain_experimental.utils.parallel import parallel_map
+from speechbrain_experimental.dataio.dataio import read_audio_info
 
 logger = logging.getLogger(__name__)
 

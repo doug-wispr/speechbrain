@@ -17,12 +17,12 @@ import torch
 import logging
 import torchaudio
 import numpy as np
-import speechbrain as sb
-from speechbrain.inference.vocoders import HIFIGAN
+import speechbrain_experimental as sb
+from speechbrain_experimental.inference.vocoders import HIFIGAN
 from pathlib import Path
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.data_utils import scalarize
-from speechbrain.inference.text import GraphemeToPhoneme
+from speechbrain_experimental.utils.data_utils import scalarize
+from speechbrain_experimental.inference.text import GraphemeToPhoneme
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 logger = logging.getLogger(__name__)

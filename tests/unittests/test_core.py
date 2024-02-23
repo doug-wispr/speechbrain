@@ -1,5 +1,5 @@
 def test_parse_arguments():
-    from speechbrain.core import parse_arguments
+    from speechbrain_experimental.core import parse_arguments
 
     filename, run_opts, overrides = parse_arguments(
         ["params.yaml", "--device=cpu", "--seed=3", "--data_folder", "TIMIT"]
@@ -11,7 +11,7 @@ def test_parse_arguments():
 
 def test_brain(device):
     import torch
-    from speechbrain.core import Brain, Stage
+    from speechbrain_experimental.core import Brain, Stage
     from torch.optim import SGD
 
     model = torch.nn.Linear(in_features=10, out_features=10, device=device)

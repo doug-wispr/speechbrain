@@ -19,10 +19,10 @@ import sys
 import random
 import torch
 import torchaudio
-import speechbrain as sb
-from speechbrain.utils.data_utils import download_file
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.data_utils import download_file
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 
 
 class SpeakerBrain(sb.core.Brain):

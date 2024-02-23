@@ -14,9 +14,9 @@ import torch
 import logging
 import pathlib as pl
 from hyperpyyaml import load_hyperpyyaml
-import speechbrain as sb
-from speechbrain.inference.vocoders import UnitHIFIGAN
-from speechbrain.inference.ASR import EncoderDecoderASR
+import speechbrain_experimental as sb
+from speechbrain_experimental.inference.vocoders import UnitHIFIGAN
+from speechbrain_experimental.inference.ASR import EncoderDecoderASR
 import tqdm
 import torchaudio
 import numpy as np
@@ -514,7 +514,7 @@ def dataio_prepare(hparams):
     # Dynamic Batching is used, we instantiate the needed samplers.
     train_batch_sampler = None
     if hparams["dynamic_batching"]:
-        from speechbrain.dataio.sampler import DynamicBatchSampler  # noqa
+        from speechbrain_experimental.dataio.sampler import DynamicBatchSampler  # noqa
 
         dynamic_hparams = hparams["dynamic_batch_sampler"]
         num_buckets = dynamic_hparams["num_buckets"]

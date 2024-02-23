@@ -1,6 +1,6 @@
 import json
-from speechbrain.inference.encoders import MelSpectrogramEncoder
-from speechbrain.inference.classifiers import EncoderClassifier
+from speechbrain_experimental.inference.encoders import MelSpectrogramEncoder
+from speechbrain_experimental.inference.classifiers import EncoderClassifier
 import torchaudio
 import pickle
 import logging

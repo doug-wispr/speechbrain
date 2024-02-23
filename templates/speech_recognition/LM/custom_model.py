@@ -14,7 +14,7 @@ Authors
 
 """
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 
 
 class CustomModel(torch.nn.Module):

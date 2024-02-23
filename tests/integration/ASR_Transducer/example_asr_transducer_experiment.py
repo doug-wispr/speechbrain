@@ -7,7 +7,7 @@ Given the tiny dataset, the expected behavior is to overfit the training dataset
 (with a validation performance that stays high).
 """
 import pathlib
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
 

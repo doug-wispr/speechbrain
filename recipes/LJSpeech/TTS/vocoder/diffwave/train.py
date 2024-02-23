@@ -10,7 +10,7 @@ import torchaudio
 import logging
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 import os
 from hyperpyyaml import load_hyperpyyaml
 
@@ -273,7 +273,7 @@ def check_tensorboard(hparams):
     """
     if hparams["use_tensorboard"]:
         try:
-            from speechbrain.utils.train_logger import TensorboardLogger
+            from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
             hparams["tensorboard_train_logger"] = TensorboardLogger(
                 hparams["tensorboard_logs"]

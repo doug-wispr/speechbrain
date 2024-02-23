@@ -6,12 +6,12 @@ Authors
 
 import os
 import sys
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 import torch
 import json
 import itertools
-from speechbrain.utils.EDER import EDER
+from speechbrain_experimental.utils.EDER import EDER
 
 
 class EmoDiaBrain(sb.Brain):

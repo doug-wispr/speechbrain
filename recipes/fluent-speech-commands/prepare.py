@@ -1,6 +1,6 @@
 import os
 import logging
-from speechbrain.dataio.dataio import read_audio
+from speechbrain_experimental.dataio.dataio import read_audio
 
 try:
     import pandas as pd

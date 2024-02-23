@@ -1,5 +1,5 @@
 def test_backofff_ngram_lm():
-    from speechbrain.lm.ngram import BackoffNgramLM
+    from speechbrain_experimental.lm.ngram import BackoffNgramLM
     import math
 
     HALF = math.log(0.5)

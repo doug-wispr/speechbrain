@@ -4,8 +4,8 @@ import math
 
 
 def test_metric_stats(device):
-    from speechbrain.utils.metric_stats import MetricStats
-    from speechbrain.nnet.losses import l1_loss
+    from speechbrain_experimental.utils.metric_stats import MetricStats
+    from speechbrain_experimental.nnet.losses import l1_loss
 
     l1_stats = MetricStats(metric=l1_loss)
     l1_stats.append(
@@ -24,7 +24,7 @@ def test_metric_stats(device):
 
 
 def test_error_rate_stats(device):
-    from speechbrain.utils.metric_stats import ErrorRateStats
+    from speechbrain_experimental.utils.metric_stats import ErrorRateStats
 
     wer_stats = ErrorRateStats()
     i2l = {1: "hello", 2: "world", 3: "the"}
@@ -49,7 +49,7 @@ def test_error_rate_stats(device):
 
 
 def test_binary_metrics(device):
-    from speechbrain.utils.metric_stats import BinaryMetricStats
+    from speechbrain_experimental.utils.metric_stats import BinaryMetricStats
 
     binary_stats = BinaryMetricStats()
     binary_stats.append(
@@ -71,7 +71,7 @@ def test_binary_metrics(device):
 
 
 def test_EER(device):
-    from speechbrain.utils.metric_stats import EER
+    from speechbrain_experimental.utils.metric_stats import EER
 
     positive_scores = torch.tensor([0.1, 0.2, 0.3], device=device)
     negative_scores = torch.tensor([0.4, 0.5, 0.6], device=device)
@@ -104,7 +104,7 @@ def test_EER(device):
 
 
 def test_minDCF(device):
-    from speechbrain.utils.metric_stats import minDCF
+    from speechbrain_experimental.utils.metric_stats import minDCF
 
     positive_scores = torch.tensor([0.1, 0.2, 0.3], device=device)
     negative_scores = torch.tensor([0.4, 0.5, 0.6], device=device)
@@ -121,7 +121,7 @@ def test_minDCF(device):
 
 def test_classification_stats():
     import pytest
-    from speechbrain.utils.metric_stats import ClassificationStats
+    from speechbrain_experimental.utils.metric_stats import ClassificationStats
 
     stats = ClassificationStats()
     stats.append(ids=["1", "2"], predictions=["B", "A"], targets=["B", "A"])
@@ -137,7 +137,7 @@ def test_classification_stats():
 
 def test_categorized_classification_stats():
     import pytest
-    from speechbrain.utils.metric_stats import ClassificationStats
+    from speechbrain_experimental.utils.metric_stats import ClassificationStats
 
     stats = ClassificationStats()
     stats.append(
@@ -170,7 +170,7 @@ def test_categorized_classification_stats():
 
 def test_classification_stats_report():
     from io import StringIO
-    from speechbrain.utils.metric_stats import ClassificationStats
+    from speechbrain_experimental.utils.metric_stats import ClassificationStats
 
     stats = ClassificationStats()
     stats.append(ids=["1", "2"], predictions=["B", "A"], targets=["B", "A"])

@@ -15,7 +15,7 @@ from pathlib import Path
 import tqdm
 import torchaudio
 import torch
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 parser = argparse.ArgumentParser(
     "utility for resampling all audio files in a folder recursively. "

@@ -12,9 +12,9 @@ import sys
 import json
 import random
 import numpy as np
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 from local.create_mixtures_metadata import create_metadata
 from local.create_mixtures_from_metadata import create_mixture
 from pathlib import Path

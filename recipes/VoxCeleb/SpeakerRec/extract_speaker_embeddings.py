@@ -35,11 +35,11 @@ import numpy as np
 import torch
 import logging
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.utils.data_utils import download_file
 
 
 def compute_embeddings_single(wavs, wav_lens, params):

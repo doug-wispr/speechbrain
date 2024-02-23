@@ -25,8 +25,8 @@ import os
 import sys
 import torch
 import logging
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main, if_main_process
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 from hyperpyyaml import load_hyperpyyaml
 from pathlib import Path
 
@@ -379,7 +379,7 @@ if __name__ == "__main__":
     ind2lab = label_encoder.ind2lab
     vocab_list = [ind2lab[x] for x in range(len(ind2lab))]
 
-    from speechbrain.decoders.ctc import CTCBeamSearcher
+    from speechbrain_experimental.decoders.ctc import CTCBeamSearcher
 
     test_searcher = CTCBeamSearcher(
         **hparams["test_beam_search"], vocab_list=vocab_list,

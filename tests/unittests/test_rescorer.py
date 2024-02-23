@@ -1,8 +1,8 @@
 def test_rnnlmrescorer(tmpdir, device):
     import torch
     from sentencepiece import SentencePieceProcessor
-    from speechbrain.lobes.models.RNNLM import RNNLM
-    from speechbrain.utils.parameter_transfer import Pretrainer
+    from speechbrain_experimental.lobes.models.RNNLM import RNNLM
+    from speechbrain_experimental.utils.parameter_transfer import Pretrainer
 
     source = "speechbrain/asr-crdnn-rnnlm-librispeech"
     lm_model_path = source + "/lm.ckpt"
@@ -31,7 +31,7 @@ def test_rnnlmrescorer(tmpdir, device):
     pretrainer.collect_files()
     pretrainer.load_collected()
 
-    from speechbrain.decoders.scorer import RNNLMRescorer, RescorerBuilder
+    from speechbrain_experimental.decoders.scorer import RNNLMRescorer, RescorerBuilder
 
     rnnlm_rescorer = RNNLMRescorer(
         language_model=lm_model,
@@ -78,8 +78,8 @@ def test_rnnlmrescorer(tmpdir, device):
 def test_transformerlmrescorer(tmpdir, device):
     import torch
     from sentencepiece import SentencePieceProcessor
-    from speechbrain.lobes.models.transformer.TransformerLM import TransformerLM
-    from speechbrain.utils.parameter_transfer import Pretrainer
+    from speechbrain_experimental.lobes.models.transformer.TransformerLM import TransformerLM
+    from speechbrain_experimental.utils.parameter_transfer import Pretrainer
 
     source = "speechbrain/asr-transformer-transformerlm-librispeech"
     lm_model_path = source + "/lm.ckpt"
@@ -107,7 +107,7 @@ def test_transformerlmrescorer(tmpdir, device):
     _ = pretrainer.collect_files()
     pretrainer.load_collected()
 
-    from speechbrain.decoders.scorer import (
+    from speechbrain_experimental.decoders.scorer import (
         TransformerLMRescorer,
         RescorerBuilder,
     )
@@ -158,7 +158,7 @@ def test_transformerlmrescorer(tmpdir, device):
 
 
 def test_huggingfacelmrescorer(device):
-    from speechbrain.decoders.scorer import (
+    from speechbrain_experimental.decoders.scorer import (
         HuggingFaceLMRescorer,
         RescorerBuilder,
     )
@@ -201,8 +201,8 @@ def test_huggingfacelmrescorer(device):
 def test_rescorerbuilder(tmpdir, device):
     import torch
     from sentencepiece import SentencePieceProcessor
-    from speechbrain.lobes.models.RNNLM import RNNLM
-    from speechbrain.utils.parameter_transfer import Pretrainer
+    from speechbrain_experimental.lobes.models.RNNLM import RNNLM
+    from speechbrain_experimental.utils.parameter_transfer import Pretrainer
 
     source = "speechbrain/asr-crdnn-rnnlm-librispeech"
     lm_model_path = source + "/lm.ckpt"
@@ -231,7 +231,7 @@ def test_rescorerbuilder(tmpdir, device):
     pretrainer.collect_files()
     pretrainer.load_collected()
 
-    from speechbrain.decoders.scorer import (
+    from speechbrain_experimental.decoders.scorer import (
         RNNLMRescorer,
         RescorerBuilder,
         HuggingFaceLMRescorer,

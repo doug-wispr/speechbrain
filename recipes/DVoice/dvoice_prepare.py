@@ -18,7 +18,7 @@ import pandas as pd
 from tqdm import tqdm
 import numpy as np
 import glob
-from speechbrain.dataio.dataio import read_audio_info
+from speechbrain_experimental.dataio.dataio import read_audio_info
 
 logger = logging.getLogger(__name__)
 

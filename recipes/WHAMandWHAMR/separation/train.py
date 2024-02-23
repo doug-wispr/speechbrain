@@ -23,15 +23,15 @@ import sys
 import torch
 import torch.nn.functional as F
 import torchaudio
-import speechbrain as sb
-import speechbrain.nnet.schedulers as schedulers
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental as sb
+import speechbrain_experimental.nnet.schedulers as schedulers
+from speechbrain_experimental.utils.distributed import run_on_main
 from hyperpyyaml import load_hyperpyyaml
 import numpy as np
 from tqdm import tqdm
 import csv
 import logging
-from speechbrain.core import AMPConfig
+from speechbrain_experimental.core import AMPConfig
 
 
 # Define training procedure

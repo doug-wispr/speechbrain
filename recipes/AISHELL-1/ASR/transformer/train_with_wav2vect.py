@@ -9,8 +9,8 @@ It is designed to work with wav2vec2 pre-training.
 import sys
 import torch
 import logging
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main
 from hyperpyyaml import load_hyperpyyaml
 
 logger = logging.getLogger(__name__)
@@ -354,7 +354,7 @@ def dataio_prepare(hparams):
     train_batch_sampler = None
     valid_batch_sampler = None
     if hparams["dynamic_batching"]:
-        from speechbrain.dataio.sampler import DynamicBatchSampler  # noqa
+        from speechbrain_experimental.dataio.sampler import DynamicBatchSampler  # noqa
 
         dynamic_hparams = hparams["dynamic_batch_sampler"]
 

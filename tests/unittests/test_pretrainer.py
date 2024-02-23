@@ -12,7 +12,7 @@ def test_pretrainer(tmpdir, device):
     # Make a new model and Pretrainer
     pretrained_model = Linear(32, 32).to(device)
     assert not torch.all(torch.eq(pretrained_model.weight, first_model.weight))
-    from speechbrain.utils.parameter_transfer import Pretrainer
+    from speechbrain_experimental.utils.parameter_transfer import Pretrainer
 
     pt = Pretrainer(
         collect_in=tmpdir / "reused", loadables={"model": pretrained_model}

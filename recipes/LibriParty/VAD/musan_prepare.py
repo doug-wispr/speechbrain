@@ -1,8 +1,8 @@
 import os
 import logging
 import torchaudio
-import speechbrain as sb
-from speechbrain.utils.data_utils import get_all_files
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 logger = logging.getLogger(__name__)
 

@@ -17,9 +17,9 @@ Authors
 
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main, if_main_process
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 import jsonlines
 import ast
 import pandas as pd
@@ -313,7 +313,7 @@ if __name__ == "__main__":
     hparams["pretrainer"].load_collected()
 
     # Download pretrained ASR model
-    from speechbrain.inference.ASR import EncoderDecoderASR
+    from speechbrain_experimental.inference.ASR import EncoderDecoderASR
 
     hparams["asr_model"] = EncoderDecoderASR.from_hparams(
         source=hparams["asr_model_source"],

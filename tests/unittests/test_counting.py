@@ -1,5 +1,5 @@
 def test_pad_ends():
-    from speechbrain.lm.counting import pad_ends
+    from speechbrain_experimental.lm.counting import pad_ends
 
     assert next(pad_ends(["a", "b", "c"])) == "<s>"
     assert next(pad_ends(["a", "b", "c"], pad_left=False)) == "a"
@@ -9,7 +9,7 @@ def test_pad_ends():
 
 
 def test_ngrams():
-    from speechbrain.lm.counting import ngrams
+    from speechbrain_experimental.lm.counting import ngrams
 
     assert next(ngrams(["a", "b", "c"], n=3)) == ("a", "b", "c")
     assert next(ngrams(["a", "b", "c"], n=1)) == ("a",)
@@ -18,7 +18,7 @@ def test_ngrams():
 
 
 def test_ngrams_for_evaluation():
-    from speechbrain.lm.counting import ngrams_for_evaluation
+    from speechbrain_experimental.lm.counting import ngrams_for_evaluation
 
     assert list(ngrams_for_evaluation(["a", "b", "c"], max_n=3)) == [
         ("b", ("a",)),

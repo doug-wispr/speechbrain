@@ -15,7 +15,7 @@ import numpy as np
 import torch
 import torchaudio
 from tqdm.contrib import tqdm
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
 )

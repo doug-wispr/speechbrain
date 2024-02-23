@@ -14,7 +14,7 @@ Authors
 import os
 import sys
 import csv
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch
 from torch.utils.data import DataLoader
 from enum import Enum, auto

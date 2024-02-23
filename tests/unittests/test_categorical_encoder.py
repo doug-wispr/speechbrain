@@ -2,7 +2,7 @@ import pytest
 
 
 def test_categorical_encoder(device):
-    from speechbrain.dataio.encoder import CategoricalEncoder
+    from speechbrain_experimental.dataio.encoder import CategoricalEncoder
 
     encoder = CategoricalEncoder()
     encoder.expect_len(4)
@@ -77,7 +77,7 @@ def test_categorical_encoder(device):
 
 
 def test_categorical_encoder_saving(tmpdir):
-    from speechbrain.dataio.encoder import CategoricalEncoder
+    from speechbrain_experimental.dataio.encoder import CategoricalEncoder
 
     encoder = CategoricalEncoder(starting_index=3)
     encoding_file = tmpdir / "char_encoding.txt"
@@ -129,8 +129,8 @@ def test_categorical_encoder_saving(tmpdir):
 
 
 def test_categorical_encoder_from_dataset():
-    from speechbrain.dataio.encoder import CategoricalEncoder
-    from speechbrain.dataio.dataset import DynamicItemDataset
+    from speechbrain_experimental.dataio.encoder import CategoricalEncoder
+    from speechbrain_experimental.dataio.dataset import DynamicItemDataset
 
     encoder = CategoricalEncoder()
     data = {
@@ -156,7 +156,7 @@ def test_categorical_encoder_from_dataset():
 
 
 def test_categorical_encoder_length_check():
-    from speechbrain.dataio.encoder import CategoricalEncoder
+    from speechbrain_experimental.dataio.encoder import CategoricalEncoder
 
     encoder = CategoricalEncoder()
     encoder.update_from_iterable("abcd")
@@ -173,7 +173,7 @@ def test_categorical_encoder_length_check():
 
 
 def test_text_encoder(tmpdir):
-    from speechbrain.dataio.encoder import TextEncoder
+    from speechbrain_experimental.dataio.encoder import TextEncoder
 
     encoder = TextEncoder()
     encoding_file = tmpdir / "text_encoding.txt"
@@ -206,7 +206,7 @@ def test_text_encoder(tmpdir):
 
 
 def test_ctc_encoder(tmpdir):
-    from speechbrain.dataio.encoder import CTCTextEncoder
+    from speechbrain_experimental.dataio.encoder import CTCTextEncoder
 
     encoder = CTCTextEncoder()
     encoder.expect_len(9)  # "abcdef" + bos + eos + blank

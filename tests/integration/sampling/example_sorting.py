@@ -6,7 +6,7 @@ import torch
 import pickle
 import pathlib
 import itertools
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch.multiprocessing as mp
 from hyperpyyaml import load_hyperpyyaml
 

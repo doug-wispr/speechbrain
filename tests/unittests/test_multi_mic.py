@@ -3,8 +3,8 @@ import torch
 
 def test_gccphat(device):
 
-    from speechbrain.processing.features import STFT
-    from speechbrain.processing.multi_mic import Covariance, GccPhat
+    from speechbrain_experimental.processing.features import STFT
+    from speechbrain_experimental.processing.multi_mic import Covariance, GccPhat
 
     # Creating the test signal
     fs = 16000

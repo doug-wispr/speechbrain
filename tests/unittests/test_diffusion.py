@@ -3,7 +3,7 @@ from torch import nn
 
 
 def test_denoising_diffusion_distort():
-    from speechbrain.nnet.diffusion import DenoisingDiffusion
+    from speechbrain_experimental.nnet.diffusion import DenoisingDiffusion
 
     dummy_model = nn.Linear(2, 2)
     diffusion = DenoisingDiffusion(model=dummy_model)
@@ -34,7 +34,7 @@ class DummyModel(nn.Module):
 
 
 def test_denoising_diffusion_sample():
-    from speechbrain.nnet.diffusion import DenoisingDiffusion
+    from speechbrain_experimental.nnet.diffusion import DenoisingDiffusion
 
     dummy_model = DummyModel()
     gen = torch.manual_seed(42)

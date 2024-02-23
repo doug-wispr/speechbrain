@@ -1,5 +1,5 @@
 def test_lengths_arg_exists():
-    from speechbrain.utils.callchains import lengths_arg_exists
+    from speechbrain_experimental.utils.callchains import lengths_arg_exists
 
     def non_len_func(x):
         return x + 1
@@ -12,7 +12,7 @@ def test_lengths_arg_exists():
 
 
 def test_lengths_capable_chain():
-    from speechbrain.utils.callchains import LengthsCapableChain
+    from speechbrain_experimental.utils.callchains import LengthsCapableChain
 
     def non_len_func(x):
         return x + 1

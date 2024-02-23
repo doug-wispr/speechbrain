@@ -8,7 +8,7 @@ Samuele Cornell, 2020
 
 import argparse
 import os
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.utils.data_utils import download_file
 from local.resample_folder import resample_folder
 
 LIBRISPEECH_URLS = [

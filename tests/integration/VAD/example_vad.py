@@ -6,7 +6,7 @@ The system is trained with the binary cross-entropy metric.
 import os
 import torch
 import numpy as np
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
 

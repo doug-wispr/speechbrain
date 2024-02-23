@@ -18,16 +18,16 @@ import math
 import json
 import os
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 
 from glob import glob
 from functools import partial
 from tqdm.auto import tqdm
 from torchaudio import functional as F
 from subprocess import list2cmdline
-from speechbrain.utils.superpowers import run_shell
-from speechbrain.utils.data_utils import download_file
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.utils.superpowers import run_shell
+from speechbrain_experimental.utils.data_utils import download_file
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
 )

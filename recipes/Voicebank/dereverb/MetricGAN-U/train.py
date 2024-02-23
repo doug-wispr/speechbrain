@@ -14,7 +14,7 @@ import sys
 import shutil
 import torch
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 import numpy as np
 import json
 import pickle
@@ -26,11 +26,11 @@ from srmrpy import srmr
 from pesq import pesq
 from enum import Enum, auto
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.metric_stats import MetricStats
-from speechbrain.processing.features import spectral_magnitude
-from speechbrain.nnet.loss.stoi_loss import stoi_loss
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.dataio.sampler import ReproducibleWeightedRandomSampler
+from speechbrain_experimental.utils.metric_stats import MetricStats
+from speechbrain_experimental.processing.features import spectral_magnitude
+from speechbrain_experimental.nnet.loss.stoi_loss import stoi_loss
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.dataio.sampler import ReproducibleWeightedRandomSampler
 
 ### For DNSMSOS
 # URL for the web service
@@ -754,7 +754,7 @@ if __name__ == "__main__":
     )
 
     if hparams["use_tensorboard"]:
-        from speechbrain.utils.train_logger import TensorboardLogger
+        from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
         hparams["tensorboard_train_logger"] = TensorboardLogger(
             hparams["tensorboard_logs"]

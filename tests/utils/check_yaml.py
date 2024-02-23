@@ -7,7 +7,7 @@ Authors
 
 import os
 import re
-from speechbrain.core import run_opt_defaults
+from speechbrain_experimental.core import run_opt_defaults
 
 
 def get_yaml_var(hparam_file):

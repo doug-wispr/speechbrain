@@ -17,15 +17,15 @@ import yaml
 import torch  # noqa
 import importlib  # noqa
 import subprocess
-import speechbrain  # noqa
+import speechbrain_experimental  # noqa
 from glob import glob
 from copy import deepcopy
 from torch.utils.data import DataLoader
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main  # noqa
-from speechbrain.utils.train_logger import FileTrainLogger
-from speechbrain.inference.interfaces import foreign_class  # noqa
-from speechbrain.dataio.dataloader import LoopedLoader, make_dataloader
+from speechbrain_experimental.utils.distributed import run_on_main  # noqa
+from speechbrain_experimental.utils.train_logger import FileTrainLogger
+from speechbrain_experimental.inference.interfaces import foreign_class  # noqa
+from speechbrain_experimental.dataio.dataloader import LoopedLoader, make_dataloader
 
 
 def init(
@@ -329,7 +329,7 @@ def test_performance(
     """
     # Dataset depending file structure
     tmp_dir = f'tests/tmp/{values["dataset"]}'
-    speechbrain.create_experiment_directory(experiment_directory=tmp_dir)
+    speechbrain_experimental.create_experiment_directory(experiment_directory=tmp_dir)
     stats_meta = {
         f'[{values["dataset"]}] - {"BEFORE" if updates_dir is None else "AFTER"}': repo
     }
@@ -411,7 +411,7 @@ def test_performance(
 # run first w/ "--after=False" on latest develop, then checkout the refactoring branch and run w/ "--after=True"
 # PYTHONPATH=`realpath .` python tests/utils/refactoring_checks.py tests/utils/overrides.yaml --LibriSpeech_data="" --CommonVoice_EN_data="" --CommonVoice_FR_data="" --IEMOCAP_data="" --after=False
 if __name__ == "__main__":
-    hparams_file, run_opts, overrides = speechbrain.parse_arguments(
+    hparams_file, run_opts, overrides = speechbrain_experimental.parse_arguments(
         sys.argv[1:]
     )
 

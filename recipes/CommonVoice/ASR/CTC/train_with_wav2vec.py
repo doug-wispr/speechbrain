@@ -26,12 +26,12 @@ Authors
 import sys
 import torch
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torchaudio
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.tokenizers.SentencePiece import SentencePiece
-from speechbrain.utils.data_utils import undo_padding
-from speechbrain.utils.distributed import run_on_main, if_main_process
+from speechbrain_experimental.tokenizers.SentencePiece import SentencePiece
+from speechbrain_experimental.utils.data_utils import undo_padding
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 
 logger = logging.getLogger(__name__)
 
@@ -342,7 +342,7 @@ if __name__ == "__main__":
         tokenizer.sp.id_to_piece(i) for i in range(tokenizer.sp.vocab_size())
     ]
 
-    from speechbrain.decoders.ctc import CTCBeamSearcher
+    from speechbrain_experimental.decoders.ctc import CTCBeamSearcher
 
     test_searcher = CTCBeamSearcher(
         **hparams["test_beam_search"], vocab_list=vocab_list,

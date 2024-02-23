@@ -13,24 +13,24 @@ Author:
 """
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.profiling import (
+from speechbrain_experimental.utils.profiling import (
     profile_report,
     export,
     report_time,
     report_memory,
 )
 
-from speechbrain.inference.interfaces import Pretrained
-from speechbrain.inference.ASR import EncoderDecoderASR, EncoderASR
-from speechbrain.inference.SLU import EndToEndSLU
-from speechbrain.inference.classifiers import EncoderClassifier
-from speechbrain.inference.speaker import SpeakerRecognition
-from speechbrain.inference.VAD import VAD
-from speechbrain.inference.separation import SepformerSeparation
-from speechbrain.inference.enhancement import SpectralMaskEnhancement
-from speechbrain.inference.metrics import SNREstimator
+from speechbrain_experimental.inference.interfaces import Pretrained
+from speechbrain_experimental.inference.ASR import EncoderDecoderASR, EncoderASR
+from speechbrain_experimental.inference.SLU import EndToEndSLU
+from speechbrain_experimental.inference.classifiers import EncoderClassifier
+from speechbrain_experimental.inference.speaker import SpeakerRecognition
+from speechbrain_experimental.inference.VAD import VAD
+from speechbrain_experimental.inference.separation import SepformerSeparation
+from speechbrain_experimental.inference.enhancement import SpectralMaskEnhancement
+from speechbrain_experimental.inference.metrics import SNREstimator
 from typing import Optional, List
 
 

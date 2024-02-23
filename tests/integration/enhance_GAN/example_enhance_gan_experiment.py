@@ -5,7 +5,7 @@ The generator and the discriminator are based on convolutional networks.
 
 import torch
 import pathlib
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
 

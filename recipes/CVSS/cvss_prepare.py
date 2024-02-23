@@ -15,7 +15,7 @@ import tqdm
 import pathlib as pl
 
 import torchaudio
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
 )

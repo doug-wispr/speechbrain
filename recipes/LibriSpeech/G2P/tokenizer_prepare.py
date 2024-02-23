@@ -6,7 +6,7 @@ import os
 import re
 import datasets
 
-from speechbrain.lobes.models.g2p.dataio import build_token_char_map
+from speechbrain_experimental.lobes.models.g2p.dataio import build_token_char_map
 
 MULTI_SPACE = re.compile(r"\s{2,}")
 

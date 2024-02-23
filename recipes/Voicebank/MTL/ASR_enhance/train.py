@@ -21,13 +21,13 @@ import sys
 import torch
 import torchaudio
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 from pesq import pesq
 from pystoi import stoi
 from composite_eval import eval_composite
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.data_utils import undo_padding
-from speechbrain.utils.distributed import run_on_main, if_main_process
+from speechbrain_experimental.utils.data_utils import undo_padding
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 
 logger = logging.getLogger(__name__)
 

@@ -4,7 +4,7 @@ import torch.nn
 
 def test_pooling1d(device):
 
-    from speechbrain.nnet.pooling import Pooling1d
+    from speechbrain_experimental.nnet.pooling import Pooling1d
 
     input = (
         torch.tensor([1, 3, 2], device=device)
@@ -25,7 +25,7 @@ def test_pooling1d(device):
 
 def test_pooling2d(device):
 
-    from speechbrain.nnet.pooling import Pooling2d
+    from speechbrain_experimental.nnet.pooling import Pooling2d
 
     input = (
         torch.tensor([[1, 3, 2], [4, 6, 5]], device=device).float().unsqueeze(0)

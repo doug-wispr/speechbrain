@@ -6,12 +6,12 @@ def test_streaming_conformer_layer(device):
     """Test whether the Conformer encoder layer masking code path (used at train
     time) is equivalent to a real streaming scenario."""
 
-    from speechbrain.lobes.models.transformer.Conformer import (
+    from speechbrain_experimental.lobes.models.transformer.Conformer import (
         ConformerEncoderLayer,
     )
-    from speechbrain.nnet.attention import RelPosEncXL
-    from speechbrain.utils.dynamic_chunk_training import DynChunkTrainConfig
-    from speechbrain.lobes.models.transformer.TransformerASR import (
+    from speechbrain_experimental.nnet.attention import RelPosEncXL
+    from speechbrain_experimental.utils.dynamic_chunk_training import DynChunkTrainConfig
+    from speechbrain_experimental.lobes.models.transformer.TransformerASR import (
         make_transformer_src_mask,
     )
 

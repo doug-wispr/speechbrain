@@ -4,7 +4,7 @@ import torch.nn
 
 def test_BatchNorm1d(device):
 
-    from speechbrain.nnet.normalization import BatchNorm1d
+    from speechbrain_experimental.nnet.normalization import BatchNorm1d
 
     input = torch.randn(100, 10, device=device) + 2.0
     norm = BatchNorm1d(input_shape=input.shape).to(device)
@@ -59,7 +59,7 @@ def test_BatchNorm1d(device):
 
 def test_BatchNorm2d(device):
 
-    from speechbrain.nnet.normalization import BatchNorm2d
+    from speechbrain_experimental.nnet.normalization import BatchNorm2d
 
     input = torch.randn(100, 10, 4, 20, device=device) + 2.0
     norm = BatchNorm2d(input_shape=input.shape).to(device)
@@ -77,7 +77,7 @@ def test_BatchNorm2d(device):
 
 def test_LayerNorm(device):
 
-    from speechbrain.nnet.normalization import LayerNorm
+    from speechbrain_experimental.nnet.normalization import LayerNorm
 
     input = torch.randn(4, 101, 256, device=device) + 2.0
     norm = LayerNorm(input_shape=input.shape).to(device)
@@ -106,7 +106,7 @@ def test_LayerNorm(device):
 
 def test_InstanceNorm1d(device):
 
-    from speechbrain.nnet.normalization import InstanceNorm1d
+    from speechbrain_experimental.nnet.normalization import InstanceNorm1d
 
     input = torch.randn(100, 10, 128, device=device) + 2.0
     norm = InstanceNorm1d(input_shape=input.shape).to(device)
@@ -124,7 +124,7 @@ def test_InstanceNorm1d(device):
 
 def test_InstanceNorm2d(device):
 
-    from speechbrain.nnet.normalization import InstanceNorm2d
+    from speechbrain_experimental.nnet.normalization import InstanceNorm2d
 
     input = torch.randn(100, 10, 20, 2, device=device) + 2.0
     norm = InstanceNorm2d(input_shape=input.shape).to(device)
@@ -142,7 +142,7 @@ def test_InstanceNorm2d(device):
 
 def test_GroupNorm(device):
 
-    from speechbrain.nnet.normalization import GroupNorm
+    from speechbrain_experimental.nnet.normalization import GroupNorm
 
     input = torch.randn(4, 101, 256, device=device) + 2.0
     norm = GroupNorm(input_shape=input.shape, num_groups=256).to(device)

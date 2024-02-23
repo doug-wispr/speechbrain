@@ -3,7 +3,7 @@ import pytest
 
 def test_hpopt_generic():
     from io import StringIO
-    from speechbrain.utils import hpopt as hp
+    from speechbrain_experimental.utils import hpopt as hp
     import json
 
     output = StringIO()
@@ -22,7 +22,7 @@ def test_hpopt_generic():
 
 
 def test_hpopt_orion():
-    from speechbrain.utils import hpopt as hp
+    from speechbrain_experimental.utils import hpopt as hp
 
     results = {}
 
@@ -44,7 +44,7 @@ def test_hpopt_orion():
 
 def test_hpopt_context():
     import json
-    from speechbrain.utils import hpopt as hp
+    from speechbrain_experimental.utils import hpopt as hp
     from io import StringIO
 
     output = StringIO()

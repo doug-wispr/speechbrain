@@ -10,16 +10,16 @@ Authors
 
 
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.dataio.batch import PaddedBatch
-from speechbrain.lobes.models.g2p.dataio import get_sequence_key
-from speechbrain.utils import hpopt as hp
-from speechbrain.wordemb.util import expand_to_chars
+from speechbrain_experimental.dataio.batch import PaddedBatch
+from speechbrain_experimental.lobes.models.g2p.dataio import get_sequence_key
+from speechbrain_experimental.utils import hpopt as hp
+from speechbrain_experimental.wordemb.util import expand_to_chars
 from train import dataio_prep, load_dependencies
 from types import SimpleNamespace
 from tqdm.auto import tqdm
 import math
 import itertools
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch
 import sys
 import logging

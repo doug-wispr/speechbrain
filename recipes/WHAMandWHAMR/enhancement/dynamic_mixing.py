@@ -1,4 +1,4 @@
-import speechbrain as sb
+import speechbrain_experimental as sb
 import numpy as np
 import torch
 import torchaudio
@@ -6,8 +6,8 @@ import glob
 import os
 from pathlib import Path
 import random
-from speechbrain.processing.signal_processing import rescale
-from speechbrain.dataio.batch import PaddedBatch
+from speechbrain_experimental.processing.signal_processing import rescale
+from speechbrain_experimental.dataio.batch import PaddedBatch
 
 """
 The functions to implement Dynamic Mixing For SpeechSeparation

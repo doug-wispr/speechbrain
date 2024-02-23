@@ -12,8 +12,8 @@ import re
 
 import torchaudio
 
-from speechbrain.dataio.dataio import load_pkl, merge_csvs, save_pkl
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.dataio.dataio import load_pkl, merge_csvs, save_pkl
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 logger = logging.getLogger(__name__)
 OPT_FILE = "opt_ksponspeech_prepare.pkl"

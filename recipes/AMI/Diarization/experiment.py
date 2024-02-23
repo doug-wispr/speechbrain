@@ -27,15 +27,15 @@ import json
 import glob
 import shutil
 import numpy as np
-import speechbrain as sb
+import speechbrain_experimental as sb
 from tqdm.contrib import tqdm
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.processing.PLDA_LDA import StatObject_SB
-from speechbrain.processing import diarization as diar
-from speechbrain.utils.DER import DER
-from speechbrain.dataio.dataio import read_audio
-from speechbrain.dataio.dataio import read_audio_multichannel
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.processing.PLDA_LDA import StatObject_SB
+from speechbrain_experimental.processing import diarization as diar
+from speechbrain_experimental.utils.DER import DER
+from speechbrain_experimental.dataio.dataio import read_audio
+from speechbrain_experimental.dataio.dataio import read_audio_multichannel
 
 np.random.seed(1234)
 

@@ -7,7 +7,7 @@ import pytest
     reason="shell tools not necessarily available on Windows",
 )
 def test_run_shell():
-    from speechbrain.utils.superpowers import run_shell
+    from speechbrain_experimental.utils.superpowers import run_shell
 
     out, err, code = run_shell("echo -n hello")
     assert out.decode() == "hello"

@@ -23,7 +23,7 @@ import tqdm
 import numpy as np
 from sklearn.cluster import MiniBatchKMeans
 from hyperpyyaml import load_hyperpyyaml
-import speechbrain as sb
+import speechbrain_experimental as sb
 from ljspeech_prepare import prepare_ljspeech
 from speechbrain.lobes.models.huggingface_wav2vec import HuggingFaceWav2Vec2
 

@@ -43,7 +43,7 @@ from typing import Dict
 from collections import defaultdict
 
 
-import speechbrain as sb
+import speechbrain_experimental as sb
 import webdataset as wds
 from hyperpyyaml import load_hyperpyyaml
 import torch

@@ -9,14 +9,14 @@ import os
 import sys
 import torch
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 from esc50_prepare import prepare_esc50
-from speechbrain.utils.metric_stats import MetricStats
+from speechbrain_experimental.utils.metric_stats import MetricStats
 from os import makedirs
 import torch.nn.functional as F
-from speechbrain.processing.NMF import spectral_phase
+from speechbrain_experimental.processing.NMF import spectral_phase
 import matplotlib.pyplot as plt
 
 eps = 1e-10
@@ -693,7 +693,7 @@ if __name__ == "__main__":
 
     # Tensorboard logging
     if hparams["use_tensorboard"]:
-        from speechbrain.utils.train_logger import TensorboardLogger
+        from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
         hparams["tensorboard_train_logger"] = TensorboardLogger(
             hparams["tensorboard_logs_folder"]

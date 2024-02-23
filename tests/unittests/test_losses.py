@@ -3,7 +3,7 @@ import pytest
 
 
 def test_nll(device):
-    from speechbrain.nnet.losses import nll_loss
+    from speechbrain_experimental.nnet.losses import nll_loss
 
     predictions = torch.zeros(4, 10, 8, device=device)
     targets = torch.zeros(4, 10, device=device)
@@ -13,7 +13,7 @@ def test_nll(device):
 
 
 def test_mse(device):
-    from speechbrain.nnet.losses import mse_loss
+    from speechbrain_experimental.nnet.losses import mse_loss
 
     predictions = torch.ones(4, 10, 8, device=device)
     targets = torch.ones(4, 10, 8, device=device)
@@ -27,7 +27,7 @@ def test_mse(device):
 
 
 def test_l1(device):
-    from speechbrain.nnet.losses import l1_loss
+    from speechbrain_experimental.nnet.losses import l1_loss
 
     predictions = torch.ones(4, 10, 8, device=device)
     targets = torch.ones(4, 10, 8, device=device)
@@ -37,7 +37,7 @@ def test_l1(device):
 
 
 def test_bce_loss(device):
-    from speechbrain.nnet.losses import bce_loss
+    from speechbrain_experimental.nnet.losses import bce_loss
 
     # Ensure this works both with and without singleton dimension
     predictions_singleton = torch.zeros(4, 10, 1, device=device)
@@ -65,7 +65,7 @@ def test_bce_loss(device):
 
 
 def test_classification_error(device):
-    from speechbrain.nnet.losses import classification_error
+    from speechbrain_experimental.nnet.losses import classification_error
 
     predictions = torch.zeros(4, 10, 8, device=device)
     predictions[:, :, 0] += 1.0
@@ -76,7 +76,7 @@ def test_classification_error(device):
 
 
 def test_pitwrapper(device):
-    from speechbrain.nnet.losses import PitWrapper
+    from speechbrain_experimental.nnet.losses import PitWrapper
     import torch
     from torch import nn
 
@@ -113,7 +113,7 @@ def test_transducer_loss(device):
     if torch.cuda.device_count() == 0:
         pytest.skip("This test can only be run if a GPU is available")
 
-    from speechbrain.nnet.losses import transducer_loss
+    from speechbrain_experimental.nnet.losses import transducer_loss
 
     device = torch.device("cuda")
     log_probs = (
@@ -153,7 +153,7 @@ def test_transducer_loss(device):
 
 
 def test_guided_attention_loss_mask(device):
-    from speechbrain.nnet.loss.guidedattn_loss import GuidedAttentionLoss
+    from speechbrain_experimental.nnet.loss.guidedattn_loss import GuidedAttentionLoss
 
     loss = GuidedAttentionLoss().to(device)
     input_lengths = torch.tensor([3, 2, 6], device=device)
@@ -192,7 +192,7 @@ def test_guided_attention_loss_mask(device):
 
 
 def test_guided_attention_loss_value(device):
-    from speechbrain.nnet.loss.guidedattn_loss import GuidedAttentionLoss
+    from speechbrain_experimental.nnet.loss.guidedattn_loss import GuidedAttentionLoss
 
     loss = GuidedAttentionLoss().to(device)
     input_lengths = torch.tensor([2, 3], device=device)
@@ -220,7 +220,7 @@ def test_guided_attention_loss_value(device):
 
 
 def test_guided_attention_loss_shapes(device):
-    from speechbrain.nnet.loss.guidedattn_loss import GuidedAttentionLoss
+    from speechbrain_experimental.nnet.loss.guidedattn_loss import GuidedAttentionLoss
 
     loss = GuidedAttentionLoss().to(device)
     input_lengths = torch.tensor([3, 2, 6], device=device)

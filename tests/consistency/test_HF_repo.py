@@ -6,7 +6,7 @@ Authors
 """
 import os
 import csv
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.utils.data_utils import download_file
 
 
 def run_HF_check(

@@ -1,8 +1,8 @@
 import os
 import shutil
 import logging
-from speechbrain.dataio.dataio import read_audio, merge_csvs
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.dataio.dataio import read_audio, merge_csvs
+from speechbrain_experimental.utils.data_utils import download_file
 
 try:
     import pandas as pd

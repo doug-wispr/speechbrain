@@ -9,7 +9,7 @@ import re
 import time
 import requests
 from tqdm.contrib import tqdm
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 
 def get_url(path):

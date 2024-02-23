@@ -33,8 +33,8 @@ Authors
 import sys
 import torch
 import logging
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main, if_main_process
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 from hyperpyyaml import load_hyperpyyaml
 from pathlib import Path
 
@@ -371,7 +371,7 @@ def dataio_prepare(hparams):
     train_batch_sampler = None
     valid_batch_sampler = None
     if hparams["dynamic_batching"]:
-        from speechbrain.dataio.sampler import DynamicBatchSampler  # noqa
+        from speechbrain_experimental.dataio.sampler import DynamicBatchSampler  # noqa
 
         dynamic_hparams = hparams["dynamic_batch_sampler"]
         num_buckets = dynamic_hparams["num_buckets"]

@@ -15,19 +15,19 @@ Authors
 import logging
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 import os
 from collections import namedtuple
 from audiomnist_prepare import prepare_audiomnist
 from hyperpyyaml import load_hyperpyyaml
 from torchaudio import functional as AF
-from speechbrain.dataio.dataio import length_to_mask, write_audio
-from speechbrain.dataio.dataset import apply_overfit_test
-from speechbrain.utils import data_utils
-from speechbrain.utils.train_logger import plot_spectrogram
+from speechbrain_experimental.dataio.dataio import length_to_mask, write_audio
+from speechbrain_experimental.dataio.dataset import apply_overfit_test
+from speechbrain_experimental.utils import data_utils
+from speechbrain_experimental.utils.train_logger import plot_spectrogram
 from enum import Enum
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.utils.data_utils import (
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.utils.data_utils import (
     dict_value_combinations,
     dist_stats,
     masked_mean,
@@ -1541,7 +1541,7 @@ def check_tensorboard(hparams):
     """
     if hparams["use_tensorboard"]:
         try:
-            from speechbrain.utils.train_logger import TensorboardLogger
+            from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
             hparams["tensorboard_train_logger"] = TensorboardLogger(
                 hparams["tensorboard_logs"]

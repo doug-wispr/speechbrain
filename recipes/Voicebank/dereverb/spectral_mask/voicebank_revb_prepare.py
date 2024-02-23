@@ -16,8 +16,8 @@ import os
 import json
 import string
 import logging
-from speechbrain.utils.data_utils import get_all_files
-from speechbrain.dataio.dataio import read_audio
+from speechbrain_experimental.utils.data_utils import get_all_files
+from speechbrain_experimental.dataio.dataio import read_audio
 
 logger = logging.getLogger(__name__)
 LEXICON_URL = "http://www.openslr.org/resources/11/librispeech-lexicon.txt"

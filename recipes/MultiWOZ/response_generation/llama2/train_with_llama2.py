@@ -13,13 +13,13 @@ Authors
 
 
 import sys
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch
 from itertools import chain
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 import math
-from speechbrain.dataio.batch import PaddedBatch
+from speechbrain_experimental.dataio.batch import PaddedBatch
 
 
 class ResGenBrain(sb.Brain):

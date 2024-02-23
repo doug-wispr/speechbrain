@@ -36,15 +36,15 @@ import braceexpand
 import webdataset as wds
 import torch.nn.functional as F
 
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 from composite_eval import eval_composite
-import speechbrain.nnet.schedulers as schedulers
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.utils.metric_stats import MetricStats
-from speechbrain.processing.features import spectral_magnitude
-from speechbrain.dataio.batch import PaddedBatch
-from speechbrain.core import AMPConfig
+import speechbrain_experimental.nnet.schedulers as schedulers
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.utils.metric_stats import MetricStats
+from speechbrain_experimental.processing.features import spectral_magnitude
+from speechbrain_experimental.dataio.batch import PaddedBatch
+from speechbrain_experimental.core import AMPConfig
 
 from pesq import pesq
 from pystoi import stoi
@@ -756,7 +756,7 @@ if __name__ == "__main__":
         hparams["precision"] = "bf16"
 
     if hparams["use_tensorboard"]:
-        from speechbrain.utils.train_logger import TensorboardLogger
+        from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
         hparams["tensorboard_train_logger"] = TensorboardLogger(
             hparams["tensorboard_logs"]

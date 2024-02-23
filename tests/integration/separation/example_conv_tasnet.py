@@ -6,10 +6,10 @@ speakers.
 
 import torch
 import pathlib
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch.nn.functional as F
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.nnet.losses import get_si_snr_with_pitwrapper
+from speechbrain_experimental.nnet.losses import get_si_snr_with_pitwrapper
 
 
 class SepBrain(sb.Brain):

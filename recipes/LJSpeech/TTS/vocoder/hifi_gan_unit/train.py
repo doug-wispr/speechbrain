@@ -17,8 +17,8 @@ import random
 import pathlib as pl
 
 from hyperpyyaml import load_hyperpyyaml
-import speechbrain as sb
-from speechbrain.utils.data_utils import scalarize
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.data_utils import scalarize
 import torch
 import torchaudio
 import numpy as np

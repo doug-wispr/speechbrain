@@ -5,7 +5,7 @@ Authors
 """
 
 import re
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 
 def extractName(s, search_class=False):

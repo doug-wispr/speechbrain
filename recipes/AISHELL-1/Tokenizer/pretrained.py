@@ -6,7 +6,7 @@ Authors
  * Abdel Heba 2020
 """
 import os
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.utils.data_utils import download_file
 import sentencepiece as spm
 
 

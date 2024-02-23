@@ -3,7 +3,7 @@ import torch.nn
 
 
 def test_SincConv(device):
-    from speechbrain.nnet.CNN import SincConv
+    from speechbrain_experimental.nnet.CNN import SincConv
 
     input = torch.rand([4, 16000], device=device)
     convolve = SincConv(
@@ -27,7 +27,7 @@ def test_SincConv(device):
 
 def test_Conv1d(device):
 
-    from speechbrain.nnet.CNN import Conv1d
+    from speechbrain_experimental.nnet.CNN import Conv1d
 
     input = (
         torch.tensor([-1, -1, -1, -1], device=device)
@@ -55,7 +55,7 @@ def test_Conv1d(device):
 
 def test_Conv2d(device):
 
-    from speechbrain.nnet.CNN import Conv2d
+    from speechbrain_experimental.nnet.CNN import Conv2d
 
     input = torch.rand([4, 11, 32, 1], device=device)
     convolve = Conv2d(
@@ -89,7 +89,7 @@ def test_Conv2d(device):
 
 
 def test_Leaf(device):
-    from speechbrain.lobes.features import Leaf
+    from speechbrain_experimental.lobes.features import Leaf
 
     input = torch.rand([4, 16000], device=device)
     convolve = Leaf(

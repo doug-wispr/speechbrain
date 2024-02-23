@@ -1,7 +1,7 @@
 import os
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.dataio.dataio import read_audio, write_audio
+from speechbrain_experimental.dataio.dataio import read_audio, write_audio
 
 output_folder = os.path.join("results", "drop_chunk")
 experiment_dir = os.path.dirname(os.path.abspath(__file__))

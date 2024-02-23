@@ -18,11 +18,11 @@ Adapted From:
 
 import torch  # noqa: F401
 import torch.nn as nn
-import speechbrain as sb
-from speechbrain.nnet.pooling import StatisticsPooling
-from speechbrain.nnet.CNN import Conv1d
-from speechbrain.nnet.linear import Linear
-from speechbrain.nnet.normalization import BatchNorm1d
+import speechbrain_experimental as sb
+from speechbrain_experimental.nnet.pooling import StatisticsPooling
+from speechbrain_experimental.nnet.CNN import Conv1d
+from speechbrain_experimental.nnet.linear import Linear
+from speechbrain_experimental.nnet.normalization import BatchNorm1d
 
 
 class Xvector(torch.nn.Module):

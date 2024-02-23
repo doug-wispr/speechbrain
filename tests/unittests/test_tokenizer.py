@@ -3,7 +3,7 @@ import torch
 
 
 def test_tokenizer():
-    from speechbrain.tokenizers.SentencePiece import SentencePiece
+    from speechbrain_experimental.tokenizers.SentencePiece import SentencePiece
 
     gt = [
         ["HELLO", "MORNING", "MORNING", "HELLO"],

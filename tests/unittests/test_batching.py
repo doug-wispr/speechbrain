@@ -4,7 +4,7 @@ import numpy as np
 
 
 def test_batch_pad_right_to(device):
-    from speechbrain.utils.data_utils import batch_pad_right
+    from speechbrain_experimental.utils.data_utils import batch_pad_right
     import random
 
     n_channels = 40
@@ -33,7 +33,7 @@ def test_batch_pad_right_to(device):
 
 
 def test_paddedbatch(device):
-    from speechbrain.dataio.batch import PaddedBatch
+    from speechbrain_experimental.dataio.batch import PaddedBatch
 
     batch = PaddedBatch(
         [
@@ -61,7 +61,7 @@ def test_paddedbatch(device):
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason="Requires CUDA")
 def test_pin_memory():
-    from speechbrain.dataio.batch import PaddedBatch
+    from speechbrain_experimental.dataio.batch import PaddedBatch
 
     batch = PaddedBatch(
         [

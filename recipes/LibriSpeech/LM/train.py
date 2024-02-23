@@ -16,8 +16,8 @@ import glob
 import torch
 from datasets import load_dataset
 from hyperpyyaml import load_hyperpyyaml
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main
 
 
 logger = logging.getLogger(__name__)

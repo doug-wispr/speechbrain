@@ -10,13 +10,13 @@ Author
 import os
 import sys
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torchaudio
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 from hyperpyyaml import load_hyperpyyaml
 from torch.utils.data import DataLoader
-from speechbrain.dataio.dataloader import LoopedLoader
-from speechbrain.utils.kmeans import fetch_kmeans_model, train, save_model
+from speechbrain_experimental.dataio.dataloader import LoopedLoader
+from speechbrain_experimental.utils.kmeans import fetch_kmeans_model, train, save_model
 
 
 logger = logging.getLogger(__name__)

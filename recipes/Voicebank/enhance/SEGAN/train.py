@@ -14,12 +14,12 @@ import os
 import sys
 import torch
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from pesq import pesq
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.metric_stats import MetricStats
-from speechbrain.nnet.loss.stoi_loss import stoi_loss
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.metric_stats import MetricStats
+from speechbrain_experimental.nnet.loss.stoi_loss import stoi_loss
+from speechbrain_experimental.utils.distributed import run_on_main
 
 
 # Brain class for speech enhancement training
@@ -486,7 +486,7 @@ if __name__ == "__main__":
     )
 
     if hparams["use_tensorboard"]:
-        from speechbrain.utils.train_logger import TensorboardLogger
+        from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
         hparams["tensorboard_train_logger"] = TensorboardLogger(
             hparams["tensorboard_logs"]

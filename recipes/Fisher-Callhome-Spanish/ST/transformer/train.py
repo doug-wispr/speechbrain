@@ -15,11 +15,11 @@ import sys
 import torch
 import logging
 
-import speechbrain as sb
+import speechbrain_experimental as sb
 
 from sacremoses import MosesDetokenizer
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 
 logger = logging.getLogger(__name__)
 en_detoeknizer = MosesDetokenizer(lang="en")

@@ -23,10 +23,10 @@ Authors
 import sys
 import torch
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.dataio.batch import PaddedBatch
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.dataio.batch import PaddedBatch
+from speechbrain_experimental.utils.distributed import run_on_main
 from media_prepare import prepare_media
 
 logger = logging.getLogger(__name__)

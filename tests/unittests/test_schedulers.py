@@ -1,6 +1,6 @@
 def test_NewBobScheduler():
 
-    from speechbrain.nnet.schedulers import NewBobScheduler
+    from speechbrain_experimental.nnet.schedulers import NewBobScheduler
 
     scheduler = NewBobScheduler(initial_value=0.8)
 
@@ -30,8 +30,8 @@ def test_NewBobScheduler():
 
 def test_WarmAndExpDecayLRSchedule():
 
-    from speechbrain.nnet.schedulers import WarmAndExpDecayLRSchedule
-    from speechbrain.nnet.linear import Linear
+    from speechbrain_experimental.nnet.schedulers import WarmAndExpDecayLRSchedule
+    from speechbrain_experimental.nnet.linear import Linear
     import torch
 
     model = Linear(input_size=3, n_neurons=4)

@@ -26,7 +26,7 @@ import torchaudio
 import unicodedata
 from tqdm import tqdm
 from tqdm.contrib import tzip
-from speechbrain.dataio.dataio import read_audio
+from speechbrain_experimental.dataio.dataio import read_audio
 
 logger = logging.getLogger(__name__)
 

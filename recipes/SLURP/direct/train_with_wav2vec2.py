@@ -17,9 +17,9 @@ For more wav2vec2/HuBERT results, please see https://arxiv.org/pdf/2111.02735.pd
 
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main, if_main_process
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 import jsonlines
 import ast
 import pandas as pd

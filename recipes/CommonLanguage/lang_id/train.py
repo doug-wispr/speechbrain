@@ -3,7 +3,7 @@ import os
 import sys
 import logging
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 from common_language_prepare import prepare_common_language
 

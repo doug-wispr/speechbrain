@@ -3,10 +3,10 @@ import os
 import pickle
 import numpy
 from numpy import linalg as LA
-from speechbrain.processing.PLDA_LDA import StatObject_SB  # noqa F401
-from speechbrain.processing.PLDA_LDA import PLDA
-from speechbrain.processing.PLDA_LDA import Ndx
-from speechbrain.processing.PLDA_LDA import fast_PLDA_scoring
+from speechbrain_experimental.processing.PLDA_LDA import StatObject_SB  # noqa F401
+from speechbrain_experimental.processing.PLDA_LDA import PLDA
+from speechbrain_experimental.processing.PLDA_LDA import Ndx
+from speechbrain_experimental.processing.PLDA_LDA import fast_PLDA_scoring
 
 
 # Load params file

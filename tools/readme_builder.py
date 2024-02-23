@@ -18,7 +18,7 @@ Authors:
 import csv
 import re
 import argparse
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 
 def create_table(fid_w, csv_file):

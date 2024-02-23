@@ -1,6 +1,6 @@
 import pytest
 
-from speechbrain.utils.parallel import parallel_map
+from speechbrain_experimental.utils.parallel import parallel_map
 
 small_test_input = [1, 2, 3, 4, 5, 6] * 5
 small_test_expected = [2, 4, 6, 8, 10, 12] * 5

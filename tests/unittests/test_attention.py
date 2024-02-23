@@ -3,7 +3,7 @@ import torch
 
 def test_rel_pos_MHA(device):
 
-    from speechbrain.nnet.attention import RelPosMHAXL
+    from speechbrain_experimental.nnet.attention import RelPosMHAXL
 
     bsz = 2
     emb_dim = 4

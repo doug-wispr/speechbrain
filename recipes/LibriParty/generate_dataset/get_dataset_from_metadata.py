@@ -9,9 +9,9 @@ Mirco Ravanelli, 2020
 
 import os
 import sys
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.data_utils import download_file
+from speechbrain_experimental.utils.data_utils import download_file
 from local.create_mixtures_from_metadata import create_mixture
 import json
 from tqdm import tqdm

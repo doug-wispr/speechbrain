@@ -3,7 +3,7 @@ import torch
 
 def test_embedding(device):
 
-    from speechbrain.nnet.embedding import Embedding
+    from speechbrain_experimental.nnet.embedding import Embedding
 
     # create one hot vector and consider blank as zero vector
     embedding_dim = 39

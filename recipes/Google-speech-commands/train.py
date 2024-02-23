@@ -19,11 +19,11 @@ import os
 import sys
 import torch
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
-import speechbrain.nnet.CNN
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental.nnet.CNN
+from speechbrain_experimental.utils.distributed import run_on_main
 
 
 class SpeakerBrain(sb.core.Brain):
@@ -43,7 +43,7 @@ class SpeakerBrain(sb.core.Brain):
             wavs, lens = self.hparams.wav_augment(wavs, lens)
 
         if isinstance(
-            self.modules.compute_features, speechbrain.lobes.features.Leaf
+            self.modules.compute_features, speechbrain_experimental.lobes.features.Leaf
         ):
             # if leaf, first normalize the wavs before feeding them to leaf
             # no normalization is needed after LEAF

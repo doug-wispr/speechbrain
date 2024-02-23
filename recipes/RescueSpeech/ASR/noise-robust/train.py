@@ -31,11 +31,11 @@ from pystoi import stoi
 import torch
 import torchaudio
 import torch.nn.functional as F
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.metric_stats import MetricStats
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.utils.data_utils import undo_padding
+from speechbrain_experimental.utils.metric_stats import MetricStats
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.utils.data_utils import undo_padding
 
 logger = logging.getLogger(__name__)
 

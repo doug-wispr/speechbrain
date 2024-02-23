@@ -5,7 +5,7 @@ Authors
  * Pradnya Kandarkar 2022
 """
 
-from speechbrain.utils.data_utils import get_all_files, download_file
+from speechbrain_experimental.utils.data_utils import get_all_files, download_file
 import json
 import os
 import shutil
@@ -14,8 +14,8 @@ import logging
 import torchaudio
 import torch
 from tqdm import tqdm
-from speechbrain.inference.txt import GraphemeToPhoneme
-from speechbrain.utils.text_to_sequence import _g2p_keep_punctuations
+from speechbrain_experimental.inference.txt import GraphemeToPhoneme
+from speechbrain_experimental.utils.text_to_sequence import _g2p_keep_punctuations
 
 logger = logging.getLogger(__name__)
 LIBRITTS_URL_PREFIX = "https://www.openslr.org/resources/60/"

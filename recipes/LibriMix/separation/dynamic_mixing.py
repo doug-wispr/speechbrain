@@ -1,10 +1,10 @@
-import speechbrain as sb
+import speechbrain_experimental as sb
 import numpy as np
 import torch
 import torchaudio
 import glob
 import os
-from speechbrain.dataio.batch import PaddedBatch
+from speechbrain_experimental.dataio.batch import PaddedBatch
 from tqdm import tqdm
 import warnings
 import pyloudnorm

@@ -11,22 +11,22 @@ import os
 import sys
 import torch
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 from copy import deepcopy
 from tqdm.contrib import tqdm
 from torch.utils.data import DataLoader
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.inference.ASR import EncoderDecoderASR
-from speechbrain.utils.distributed import run_on_main, ddp_barrier
-from speechbrain.utils.data_utils import batch_pad_right
-from speechbrain.dataio.dataset import DynamicItemDataset
-from speechbrain.dataio.sampler import DynamicBatchSampler
-from speechbrain.dataio.dataloader import (
+from speechbrain_experimental.inference.ASR import EncoderDecoderASR
+from speechbrain_experimental.utils.distributed import run_on_main, ddp_barrier
+from speechbrain_experimental.utils.data_utils import batch_pad_right
+from speechbrain_experimental.dataio.dataset import DynamicItemDataset
+from speechbrain_experimental.dataio.sampler import DynamicBatchSampler
+from speechbrain_experimental.dataio.dataloader import (
     LoopedLoader,
     make_dataloader,
     distributed_loader_specifics,
 )
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.dataio.dataio import (
     read_audio,
     # read_audio_multichannel,
 )

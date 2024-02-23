@@ -13,7 +13,7 @@ import glob
 import json
 from ami_splits import get_AMI_split
 
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
 )

@@ -11,7 +11,7 @@ import csv
 import logging
 import torchaudio
 import functools
-from speechbrain.utils.parallel import parallel_map
+from speechbrain_experimental.utils.parallel import parallel_map
 
 logger = logging.getLogger(__name__)
 

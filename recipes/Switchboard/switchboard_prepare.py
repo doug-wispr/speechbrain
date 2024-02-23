@@ -24,8 +24,8 @@ import logging
 import os
 from collections import defaultdict
 
-from speechbrain.dataio.dataio import merge_csvs
-from speechbrain.utils.data_utils import download_file, get_all_files
+from speechbrain_experimental.dataio.dataio import merge_csvs
+from speechbrain_experimental.utils.data_utils import download_file, get_all_files
 
 logging.basicConfig()
 logging.getLogger().setLevel(logging.INFO)

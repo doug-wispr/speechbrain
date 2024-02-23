@@ -57,14 +57,14 @@ Authors
 import itertools
 import math
 import os
-import speechbrain as sb
+import speechbrain_experimental as sb
 import sys
 import traceback
 
 from cmd import Cmd
 from argparse import ArgumentParser
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.inference.text import GraphemeToPhoneme
+from speechbrain_experimental.inference.text import GraphemeToPhoneme
 from tqdm.auto import tqdm
 
 MSG_MODEL_NOT_FOUND = "Model path not found"

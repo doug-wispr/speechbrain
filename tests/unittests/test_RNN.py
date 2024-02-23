@@ -5,7 +5,7 @@ from collections import OrderedDict
 
 def test_RNN(device):
 
-    from speechbrain.nnet.RNN import RNN, GRU, LSTM, LiGRU, QuasiRNN, RNNCell
+    from speechbrain_experimental.nnet.RNN import RNN, GRU, LSTM, LiGRU, QuasiRNN, RNNCell
 
     # Check RNN
     inputs = torch.randn(4, 2, 7, device=device)

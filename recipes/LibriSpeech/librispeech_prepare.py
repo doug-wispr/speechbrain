@@ -19,17 +19,17 @@ from collections import Counter
 from dataclasses import dataclass
 import functools
 import logging
-from speechbrain.utils.data_utils import (
+from speechbrain_experimental.utils.data_utils import (
     download_file,
     get_all_files,
 )
-from speechbrain.dataio.dataio import (
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
     merge_csvs,
     read_audio_info,
 )
-from speechbrain.utils.parallel import parallel_map
+from speechbrain_experimental.utils.parallel import parallel_map
 
 logger = logging.getLogger(__name__)
 OPT_FILE = "opt_librispeech_prepare.pkl"

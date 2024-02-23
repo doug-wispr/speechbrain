@@ -20,8 +20,8 @@ def _batch_fake_probs(indexes, count):
 
 
 def test_subsequence_loss():
-    from speechbrain.nnet.losses import nll_loss
-    from speechbrain.lobes.models.g2p.homograph import SubsequenceLoss
+    from speechbrain_experimental.nnet.losses import nll_loss
+    from speechbrain_experimental.lobes.models.g2p.homograph import SubsequenceLoss
 
     phn_dim = 4
     phns = torch.tensor(
@@ -62,7 +62,7 @@ def test_subsequence_loss():
 
 
 def test_extract_hyps():
-    from speechbrain.lobes.models.g2p.homograph import SubsequenceExtractor
+    from speechbrain_experimental.lobes.models.g2p.homograph import SubsequenceExtractor
 
     phns = torch.tensor(
         [

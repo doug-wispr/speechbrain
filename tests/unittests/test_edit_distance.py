@@ -1,5 +1,5 @@
 def test_accumulatable_wer_stats():
-    from speechbrain.utils.edit_distance import accumulatable_wer_stats
+    from speechbrain_experimental.utils.edit_distance import accumulatable_wer_stats
 
     refs = [[[1, 2, 3], [4, 5, 6]], [[7, 8], [9]]]
     hyps = [[[1, 2, 4], [5, 6]], [[7, 8], [10]]]
@@ -27,7 +27,7 @@ def test_accumulatable_wer_stats():
 
 
 def test_op_table():
-    from speechbrain.utils.edit_distance import op_table, EDIT_SYMBOLS
+    from speechbrain_experimental.utils.edit_distance import op_table, EDIT_SYMBOLS
 
     assert len(op_table([1, 2, 3], [1, 2, 4])) == 4
     assert len(op_table([1, 2, 3], [1, 2, 4])[0]) == 4
@@ -39,7 +39,7 @@ def test_op_table():
 
 
 def test_alignment():
-    from speechbrain.utils.edit_distance import alignment, EDIT_SYMBOLS
+    from speechbrain_experimental.utils.edit_distance import alignment, EDIT_SYMBOLS
 
     I = EDIT_SYMBOLS["ins"]  # noqa: E741, here I is a good var name
     D = EDIT_SYMBOLS["del"]
@@ -50,7 +50,7 @@ def test_alignment():
 
 
 def test_count_ops():
-    from speechbrain.utils.edit_distance import count_ops, EDIT_SYMBOLS
+    from speechbrain_experimental.utils.edit_distance import count_ops, EDIT_SYMBOLS
 
     I = EDIT_SYMBOLS["ins"]  # noqa: E741, here I is a good var name
     D = EDIT_SYMBOLS["del"]

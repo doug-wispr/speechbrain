@@ -14,12 +14,12 @@ import torch
 import torchaudio
 import numpy as np
 from tqdm import tqdm
-import speechbrain as sb
-from speechbrain.dataio.dataio import (
+import speechbrain_experimental as sb
+from speechbrain_experimental.dataio.dataio import (
     load_pkl,
     save_pkl,
 )
-from speechbrain.lobes.models.huggingface_transformers.wav2vec2 import Wav2Vec2
+from speechbrain_experimental.lobes.models.huggingface_transformers.wav2vec2 import Wav2Vec2
 
 OPT_FILE = "opt_ljspeech_extract.pkl"
 TRAIN_JSON = "train.json"

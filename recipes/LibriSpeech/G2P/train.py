@@ -8,25 +8,25 @@ Authors
  * Mirco Ravanelli 2020
  * Artem Ploujnikov 2021
 """
-from speechbrain.dataio.dataset import (
+from speechbrain_experimental.dataio.dataset import (
     FilteredSortedDynamicItemDataset,
     DynamicItemDataset,
 )
-from speechbrain.dataio.sampler import BalancingDataSampler
-from speechbrain.utils.data_utils import undo_padding
+from speechbrain_experimental.dataio.sampler import BalancingDataSampler
+from speechbrain_experimental.utils.data_utils import undo_padding
 import datasets
 import logging
 import os
 import random
-import speechbrain as sb
+import speechbrain_experimental as sb
 import sys
 from enum import Enum
 from collections import namedtuple
 from hyperpyyaml import load_hyperpyyaml
 from functools import partial
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.utils.pretrained import save_for_pretrained
-from speechbrain.lobes.models.g2p.dataio import (
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.utils.pretrained import save_for_pretrained
+from speechbrain_experimental.lobes.models.g2p.dataio import (
     enable_eos_bos,
     grapheme_pipeline,
     phoneme_pipeline,
@@ -35,10 +35,10 @@ from speechbrain.lobes.models.g2p.dataio import (
     get_sequence_key,
     phonemes_to_label,
 )
-from speechbrain.dataio.wer import print_alignments
-from speechbrain.wordemb.util import expand_to_chars
+from speechbrain_experimental.dataio.wer import print_alignments
+from speechbrain_experimental.wordemb.util import expand_to_chars
 from io import StringIO
-from speechbrain.utils import hpopt as hp
+from speechbrain_experimental.utils import hpopt as hp
 import numpy as np
 
 logger = logging.getLogger(__name__)
@@ -1131,7 +1131,7 @@ def check_tensorboard(hparams):
     """
     if hparams["use_tensorboard"]:
         try:
-            from speechbrain.utils.train_logger import TensorboardLogger
+            from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
             hparams["tensorboard_train_logger"] = TensorboardLogger(
                 hparams["tensorboard_logs"]

@@ -13,8 +13,8 @@ import shutil
 import logging
 import glob
 import csv
-from speechbrain.dataio.dataio import read_audio_info
-from speechbrain.utils.parallel import parallel_map
+from speechbrain_experimental.dataio.dataio import read_audio_info
+from speechbrain_experimental.utils.parallel import parallel_map
 import functools
 
 logger = logging.getLogger(__name__)

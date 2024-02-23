@@ -7,7 +7,7 @@ training data  (with a validation performance that stays high).
 """
 
 import pathlib
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 
 

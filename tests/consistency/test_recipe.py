@@ -5,7 +5,7 @@ Authors
 """
 import os
 import csv
-from speechbrain.utils.data_utils import get_all_files, get_list_from_csv
+from speechbrain_experimental.utils.data_utils import get_all_files, get_list_from_csv
 
 __skip_list = ["README.md", "setup", "full_inference.csv"]
 

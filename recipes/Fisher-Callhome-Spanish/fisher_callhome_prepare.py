@@ -20,9 +20,9 @@ import torch
 import torchaudio
 
 from tqdm import tqdm
-from speechbrain.utils.data_utils import get_all_files
-from speechbrain.utils.torch_audio_backend import check_torchaudio_backend
-from speechbrain.augment.time_domain import Resample
+from speechbrain_experimental.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.torch_audio_backend import check_torchaudio_backend
+from speechbrain_experimental.augment.time_domain import Resample
 
 try:
     from sacremoses import MosesPunctNormalizer, MosesTokenizer

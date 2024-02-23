@@ -25,13 +25,13 @@ import os
 import sys
 import torch
 import logging
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main, if_main_process
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 from hyperpyyaml import load_hyperpyyaml
 from collections import defaultdict
 from pathlib import Path
 
-import speechbrain.k2_integration as sbk2
+import speechbrain_experimental.k2_integration as sbk2
 
 logger = logging.getLogger(__name__)
 

@@ -18,10 +18,10 @@ Authors
 
 import sys
 import torch
-import speechbrain as sb
+import speechbrain_experimental as sb
 import logging
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main, if_main_process
+from speechbrain_experimental.utils.distributed import run_on_main, if_main_process
 
 
 logger = logging.getLogger(__name__)

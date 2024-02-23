@@ -19,8 +19,8 @@ import re
 import hashlib
 import copy
 import numpy as np
-from speechbrain.utils.data_utils import download_file
-from speechbrain.dataio.dataio import read_audio
+from speechbrain_experimental.utils.data_utils import download_file
+from speechbrain_experimental.dataio.dataio import read_audio
 
 try:
     import pandas as pd

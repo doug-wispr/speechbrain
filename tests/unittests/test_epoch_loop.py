@@ -1,6 +1,6 @@
 def test_epoch_loop_recovery(tmpdir):
-    from speechbrain.utils.checkpoints import Checkpointer
-    from speechbrain.utils.epoch_loop import EpochCounter
+    from speechbrain_experimental.utils.checkpoints import Checkpointer
+    from speechbrain_experimental.utils.epoch_loop import EpochCounter
 
     epoch_counter = EpochCounter(2)
     recoverer = Checkpointer(tmpdir, {"epoch": epoch_counter})

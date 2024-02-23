@@ -43,8 +43,8 @@ import json
 import logging
 import ntpath
 import torchaudio
-from speechbrain.dataio.dataio import read_audio
-from speechbrain.dataio.dataio import load_data_csv
+from speechbrain_experimental.dataio.dataio import read_audio
+from speechbrain_experimental.dataio.dataio import load_data_csv
 
 logger = logging.getLogger(__name__)
 
@@ -365,10 +365,10 @@ def prompt_download_urban_sound_8k(destination):
 
 # Testing
 if __name__ == "__main__":
-    import speechbrain
+    import speechbrain_experimental
 
     # Data preparation, to be run on only one process.
-    speechbrain.utils.distributed.run_on_main(
+    speechbrain_experimental.utils.distributed.run_on_main(
         prepare_urban_sound_8k,
         kwargs={
             "data_folder": "/Volumes/BigMule/BigDevDocuments/UrbanSound8K",

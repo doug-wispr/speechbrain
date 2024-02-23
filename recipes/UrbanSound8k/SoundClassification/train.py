@@ -22,9 +22,9 @@ import os
 import sys
 import torch
 import torchaudio
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.distributed import run_on_main
 from urbansound8k_prepare import prepare_urban_sound_8k
 from sklearn.metrics import confusion_matrix
 import numpy as np
@@ -374,7 +374,7 @@ if __name__ == "__main__":
 
     # Tensorboard logging
     if hparams["use_tensorboard"]:
-        from speechbrain.utils.train_logger import TensorboardLogger
+        from speechbrain_experimental.utils.train_logger import TensorboardLogger
 
         hparams["tensorboard_train_logger"] = TensorboardLogger(
             hparams["tensorboard_logs_folder"]

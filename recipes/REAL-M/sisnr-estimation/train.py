@@ -11,16 +11,16 @@ Authors:
 import os
 import sys
 import torch
-import speechbrain as sb
-import speechbrain.nnet.schedulers as schedulers
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental as sb
+import speechbrain_experimental.nnet.schedulers as schedulers
+from speechbrain_experimental.utils.distributed import run_on_main
 from hyperpyyaml import load_hyperpyyaml
 import itertools as it
 from tqdm import tqdm
 import numpy as np
 import logging
 import csv
-from speechbrain.core import AMPConfig
+from speechbrain_experimental.core import AMPConfig
 
 
 # Define training procedure
@@ -763,10 +763,10 @@ if __name__ == "__main__":
         checkpointer=hparams["checkpointer"],
     )
 
-    from speechbrain.inference.separation import (
+    from speechbrain_experimental.inference.separation import (
         SepformerSeparation as separator,
     )
-    from speechbrain.utils.fetching import fetch
+    from speechbrain_experimental.utils.fetching import fetch
 
     all_separators = []
     for separator_model in hparams["separators_to_use"]:

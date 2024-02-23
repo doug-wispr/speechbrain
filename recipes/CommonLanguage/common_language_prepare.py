@@ -13,7 +13,7 @@ import csv
 import logging
 import torchaudio
 from tqdm.contrib import tzip
-from speechbrain.utils.data_utils import get_all_files
+from speechbrain_experimental.utils.data_utils import get_all_files
 
 logger = logging.getLogger(__name__)
 

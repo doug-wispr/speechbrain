@@ -13,7 +13,7 @@ import torch
 import json
 import numpy as np
 import torchaudio
-from speechbrain.processing.signal_processing import rescale, reverberate
+from speechbrain_experimental.processing.signal_processing import rescale, reverberate
 
 
 def create_mixture(session_n, output_dir, params, metadata):

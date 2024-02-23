@@ -14,7 +14,7 @@ import re
 import json
 import random
 import logging
-from speechbrain.dataio.dataio import read_audio
+from speechbrain_experimental.dataio.dataio import read_audio
 
 logger = logging.getLogger(__name__)
 SAMPLERATE = 16000

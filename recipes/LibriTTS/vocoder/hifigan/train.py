@@ -14,8 +14,8 @@ Authors
 import sys
 import torch
 from hyperpyyaml import load_hyperpyyaml
-import speechbrain as sb
-from speechbrain.utils.data_utils import scalarize
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.data_utils import scalarize
 import torchaudio
 import os
 

@@ -2,7 +2,7 @@ import torch
 
 
 def test_deltas(device):
-    from speechbrain.processing.features import Deltas
+    from speechbrain_experimental.processing.features import Deltas
 
     size = [10, 101, 20]
     inp = torch.ones(size, device=device)
@@ -14,7 +14,7 @@ def test_deltas(device):
 
 
 def test_context_window(device):
-    from speechbrain.processing.features import ContextWindow
+    from speechbrain_experimental.processing.features import ContextWindow
 
     inp = (
         torch.tensor([1, 2, 3], device=device)
@@ -38,8 +38,8 @@ def test_context_window(device):
 
 
 def test_istft(device):
-    from speechbrain.processing.features import STFT
-    from speechbrain.processing.features import ISTFT
+    from speechbrain_experimental.processing.features import STFT
+    from speechbrain_experimental.processing.features import ISTFT
 
     fs = 16000
     inp = torch.randn([10, 16000], device=device)
@@ -56,7 +56,7 @@ def test_istft(device):
 
 
 def test_filterbank(device):
-    from speechbrain.processing.features import Filterbank
+    from speechbrain_experimental.processing.features import Filterbank
 
     compute_fbanks = Filterbank().to(device)
     inputs = torch.ones([10, 101, 201], device=device)
@@ -86,7 +86,7 @@ def test_filterbank(device):
 
 
 def test_dtc(device):
-    from speechbrain.processing.features import DCT
+    from speechbrain_experimental.processing.features import DCT
 
     compute_dct = DCT(input_size=40)
     inputs = torch.randn([10, 101, 40], device=device)
@@ -94,7 +94,7 @@ def test_dtc(device):
 
 
 def test_input_normalization(device):
-    from speechbrain.processing.features import InputNormalization
+    from speechbrain_experimental.processing.features import InputNormalization
 
     norm = InputNormalization().to(device)
     inputs = torch.randn([10, 101, 20], device=device)
@@ -115,7 +115,7 @@ def test_input_normalization(device):
 
 
 def test_features_multimic(device):
-    from speechbrain.processing.features import Filterbank
+    from speechbrain_experimental.processing.features import Filterbank
 
     compute_fbanks = Filterbank().to(device)
     inputs = torch.rand([10, 101, 201], device=device)

@@ -2,7 +2,7 @@ import pytest
 
 
 def test_read_arpa():
-    from speechbrain.lm.arpa import read_arpa
+    from speechbrain_experimental.lm.arpa import read_arpa
     import io
 
     with io.StringIO() as f:
@@ -93,7 +93,7 @@ def test_read_arpa():
 
 def test_weird_arpa_formats():
     # We've decided to not be picky about ARPA format
-    from speechbrain.lm.arpa import read_arpa
+    from speechbrain_experimental.lm.arpa import read_arpa
     import io
 
     with io.StringIO() as f:

@@ -9,8 +9,8 @@ import sys
 import torch
 import logging
 
-import speechbrain as sb
-from speechbrain.utils.distributed import run_on_main
+import speechbrain_experimental as sb
+from speechbrain_experimental.utils.distributed import run_on_main
 from hyperpyyaml import load_hyperpyyaml
 from sacremoses import MosesDetokenizer
 from torch.nn.parallel import DistributedDataParallel

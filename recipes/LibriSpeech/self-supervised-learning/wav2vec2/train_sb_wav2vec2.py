@@ -17,19 +17,19 @@ import sys
 import time
 from functools import partial
 
-import speechbrain as sb
+import speechbrain_experimental as sb
 import torch
 import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel
 from hyperpyyaml import load_hyperpyyaml
 
-from speechbrain import Stage
-from speechbrain.utils.distributed import run_on_main
-from speechbrain.dataio.dataloader import SaveableDataLoader
-from speechbrain.dataio.sampler import DynamicBatchSampler
-from speechbrain.lobes.models.wav2vec import w2v_mask_collate_fn
-from speechbrain.lobes.models.wav2vec import sample_negatives
-from speechbrain.core import AMPConfig
+from speechbrain_experimental import Stage
+from speechbrain_experimental.utils.distributed import run_on_main
+from speechbrain_experimental.dataio.dataloader import SaveableDataLoader
+from speechbrain_experimental.dataio.sampler import DynamicBatchSampler
+from speechbrain_experimental.lobes.models.wav2vec import w2v_mask_collate_fn
+from speechbrain_experimental.lobes.models.wav2vec import sample_negatives
+from speechbrain_experimental.core import AMPConfig
 
 logger = logging.getLogger(__name__)
 

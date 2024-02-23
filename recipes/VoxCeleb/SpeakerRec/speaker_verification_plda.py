@@ -16,17 +16,17 @@ import sys
 import torch
 import torchaudio
 import logging
-import speechbrain as sb
+import speechbrain_experimental as sb
 import numpy
 import pickle
 from tqdm.contrib import tqdm
 from hyperpyyaml import load_hyperpyyaml
-from speechbrain.utils.metric_stats import EER, minDCF
-from speechbrain.processing.PLDA_LDA import StatObject_SB
-from speechbrain.processing.PLDA_LDA import Ndx
-from speechbrain.processing.PLDA_LDA import fast_PLDA_scoring
-from speechbrain.utils.data_utils import download_file
-from speechbrain.utils.distributed import run_on_main
+from speechbrain_experimental.utils.metric_stats import EER, minDCF
+from speechbrain_experimental.processing.PLDA_LDA import StatObject_SB
+from speechbrain_experimental.processing.PLDA_LDA import Ndx
+from speechbrain_experimental.processing.PLDA_LDA import fast_PLDA_scoring
+from speechbrain_experimental.utils.data_utils import download_file
+from speechbrain_experimental.utils.distributed import run_on_main
 
 
 # Compute embeddings from the waveforms

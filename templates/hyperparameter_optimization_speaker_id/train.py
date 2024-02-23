@@ -33,10 +33,10 @@ Authors
 """
 import os
 import sys
-import speechbrain as sb
+import speechbrain_experimental as sb
 from hyperpyyaml import load_hyperpyyaml
 from mini_librispeech_prepare import prepare_mini_librispeech
-from speechbrain.utils import hpopt as hp
+from speechbrain_experimental.utils import hpopt as hp
 
 
 # Brain class for speech enhancement training
